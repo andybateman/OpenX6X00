@@ -83,6 +83,7 @@
 #include "apps_menu.h"
 #include "dialog_birdie.h"
 #include "dialog_scan.h"
+#include "dialog_prop.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -425,6 +426,7 @@ static const char *app_name(press_action_t a) {
         case ACTION_APP_CHANNELS:   return "Channels";
         case ACTION_APP_BIRDIE:     return "Birdie Cal";
         case ACTION_APP_SCAN:       return "Scan";
+        case ACTION_APP_PROP:       return "Prop";
         default:                   return NULL;    /* Modes menu: a menu, not an app */
     }
 }
@@ -513,6 +515,7 @@ void main_screen_start_app(press_action_t app_action) {
         {ACTION_APP_CHANNELS, &dialog_channels},
         {ACTION_APP_BIRDIE, &dialog_birdie},
         {ACTION_APP_SCAN, &dialog_scan},
+        {ACTION_APP_PROP, &dialog_prop},
     };
 
     if (app_action == ACTION_APP_RTTY) {

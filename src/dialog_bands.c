@@ -20,6 +20,7 @@
 #include "events.h"
 #include "field/bands.h"
 #include "keyboard.h"
+#include "main_screen.h"
 #include "params/params.h"
 #include "radio.h"
 #include "styles.h"
@@ -38,12 +39,14 @@ static void destruct_cb(void);
 static void key_cb(lv_event_t *e);
 static void beacon_cb(button_data_t *b);
 static void tune_cb(button_data_t *b);
+static void prop_cb(button_data_t *b);
 
 static button_data_t btn_page   = {.type = BTN_TEXT, .label = "(BANDS 1:1)"};
 static button_data_t btn_beacon = {.type = BTN_TEXT, .label = "Test\nbeacon", .press = beacon_cb};
 static button_data_t btn_tune   = {.type = BTN_TEXT, .label = "Use\nband", .press = tune_cb};
+static button_data_t btn_prop   = {.type = BTN_TEXT, .label = "Open\nnow", .press = prop_cb};
 
-static buttons_page_t btn_page_1 = {.items = {&btn_page, &btn_beacon, &btn_tune}};
+static buttons_page_t btn_page_1 = {.items = {&btn_page, &btn_beacon, &btn_tune, &btn_prop}};
 
 static dialog_t dialog = {
     .run          = false,
@@ -137,6 +140,11 @@ static void beacon_cb(button_data_t *b) {
 static void tune_cb(button_data_t *b) {
     dialog_field_tune_band(sel);
     dialog_destruct();      /* the band chosen, back to the radio, as the Modes menu does */
+}
+
+/* The APP grid is full, so Prop opens from here, or from a long-press action */
+static void prop_cb(button_data_t *b) {
+    main_screen_start_app(ACTION_APP_PROP);
 }
 
 static void cell_click_cb(lv_event_t *e) {

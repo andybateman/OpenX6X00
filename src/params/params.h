@@ -72,6 +72,7 @@ typedef enum {
     ACTION_APP_CHANNELS, /* 124: the CHANNELS window, as the hand mic V/M key */
     ACTION_APP_BIRDIE,   /* 125: Birdie Cal */
     ACTION_APP_SCAN,     /* 126: receive scan */
+    ACTION_APP_PROP,     /* 127: which bands are open from here */
 } press_action_t;
 
 typedef enum {

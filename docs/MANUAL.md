@@ -2436,6 +2436,7 @@ apps: APP (page 3) > Bands, or a long-press action.
 - MFK to choose, a press (or Use band) tunes a typical frequency of the band
   (CW or phone, as the radio's mode; for the band plan's region, see [Band plan](#band-plan)).
 - Test beacon sends `TEST DE <call>` in CW. ESC closes.
+- Open now opens [Prop](#prop), which shows what is open from where you are.
 - The numbers are the same as in Field Ops.
 
 ### Birdie Cal
@@ -2460,6 +2461,30 @@ notch on a birdie that falls inside the passband in USB, LSB and the digital
 modes, and takes it off again when you tune away (a notch you set yourself is
 left alone). The receiver's own centre spike, which moves with the VFO, is not a
 birdie and is not kept.
+
+### Prop
+
+Which bands are open from where you are: Bands > Open now, or the long-press action APP Prop. Bands counts the
+world's spots. Prop counts what receivers within 800 km of you decoded from more than 1000 km away, on
+[PSK Reporter](https://pskreporter.info) in the last 30 minutes. It needs a network and a position: a GPS fix, or
+else the QTH locator. It never transmits.
+
+| Word | Means |
+|---|---|
+| OPEN | At least two receiver locations each heard 5 or more different stations from more than 1000 km away |
+| THIN | Some were heard, but not that widely: one good site can hear far more than its neighbours |
+| LOCAL | Only heard from closer than that, or from where no locator was given |
+| - | Nothing heard |
+
+- Each band shows the number of distant stations and the longest path. The best band is framed.
+- MFK to choose, a press (or Use band) tunes a typical frequency of the band, as in Bands.
+- The header shows the locator used, the solar flux and the Kp index from NOAA, for context only: they do not
+  change the words.
+- It asks only while open, and at most every five minutes (Refresh says how long is left). The last answer stays
+  for the next opening.
+- This is what was heard, not a forecast. Most of it is FT8, so OPEN says the path is there, not that a voice signal
+  will make it. Those receivers may also have better antennas than yours.
+- `-` can mean no one near you was listening. Check the receiver count on the status line.
 
 ### Scan
 

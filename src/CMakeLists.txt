@@ -13,7 +13,7 @@ target_sources(${PROJECT_NAME} PUBLIC
     rtty.c screen_shot.c screen_rec.c avi_writer.c screen_light.c gps.c cat.cpp tci_ws.c tci_audio.c tci_server.c cfg_socket.cpp
     app_window.c settings_window.cpp swrscan_window.c ft8_window.c
     freq_entry.c gps_window.c cw_messages.c
-    voice_messages.c recorder_window.c qth_entry.c station.c dialog_channels.c dialog_scan.c rxscan.c
+    voice_messages.c recorder_window.c qth_entry.c station.c dialog_channels.c dialog_scan.c rxscan.c dialog_prop.c propband.c
     js8_window.c js8_map.c map_geo.c
     dialog_psk.c psk_rx.c psk_tx.c psk_spec.c psk_macro.c digi_qso.c
     dialog_olivia.c olivia.c olivia_app.c olivia_demod.c olivia_macro.c olivia_mod.c olivia_resamp.c

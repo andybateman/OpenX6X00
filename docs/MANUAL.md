@@ -16,7 +16,7 @@ Settings. Button and option names are written as the radio shows them.
 - [Transmitting](#transmitting): [TX shift](#tx-shift), [transverter TX power limit](#transverter-tx-power-limit), [SWR scan and the tuner](#swr-scan-and-the-tuner), [TUNE for an external tuner](#tune-for-an-external-tuner), [digital-mode TX level](#digital-mode-tx-level), [recording voice messages](#recording-voice-messages), [ALC in CW](#alc-in-cw)
 - [Digital modes](#digital-modes): [opening a mode](#opening-a-mode), [FT8 and FT4](#ft8-and-ft4), [JS8](#js8), [WSPR](#wspr), [SSTV, WeFax and NavTex](#sstv-wefax-and-navtex), [PSK31, PSK63 and Olivia](#psk31-psk63-and-olivia), [JTTY](#jtty), [RTTY and WeFax TX](#rtty-and-wefax-tx)
 - [CW](#cw): [CW decoder](#cw-decoder), [CW from the keyboard](#cw-from-the-keyboard), [CW Keyboard](#cw-keyboard), [USB paddle](#usb-paddle), [CW messages](#cw-messages), [CW Trainer](#cw-trainer)
-- [Apps](#apps): [DX Cluster](#dx-cluster), [Field Ops (SOTA / POTA)](#field-ops-sota--pota), [Bands](#bands), [Channels](#channels)
+- [Apps](#apps): [DX Cluster](#dx-cluster), [Field Ops (SOTA / POTA)](#field-ops-sota--pota), [Bands](#bands), [Scan](#scan), [Channels](#channels)
 - [Bluetooth](#bluetooth): [headphones](#bluetooth-headphones), [CAT](#bluetooth-cat)
 - [Themes](#themes)
 - [Web configurator](#web-configurator)
@@ -2460,6 +2460,28 @@ notch on a birdie that falls inside the passband in USB, LSB and the digital
 modes, and takes it off again when you tune away (a notch you set yourself is
 left alone). The receiver's own centre spike, which moves with the VFO, is not a
 birdie and is not kept.
+
+### Scan
+
+APP > Scan steps the receiver through the channels, or a span around the VFO, and stops on a signal. It only
+receives. Keying the radio ends it, and so does anything else that moves the VFO.
+
+| Button | Does |
+|---|---|
+| Run / Stop | Starts and stops. Stop leaves the radio where it is |
+| Scan | Channels, or 50, 100, 200 or 500 kHz around the VFO |
+| Step | 2.5, 5 or 10 kHz, for a span |
+| Level | S3, S5, S7 or S9: what counts as a signal |
+| On signal | Stop there, or stay until it has been gone 5 or 10 s, then go on |
+
+- The settings take effect at the next Run and are not kept after a restart.
+- A stop takes about 0.6 s: 0.25 s for the S-meter to settle, then 0.3 s listening. Two readings in a row at the
+  level or over make a signal.
+- The main knob moves on to the next stop while scanning, also from a signal being held.
+- Channels tune with their own mode, AGC, PRE and ATT. Scanning across bands switches the band filters at every
+  stop: the relays click, and a list on one band is kinder to them.
+- A span follows [Mode from band plan](#band-plan) when that is on: the mode changes as a stop lands in a CW
+  segment, and the wider the filter, the more of the noise the Level has to clear.
 
 ### Channels
 

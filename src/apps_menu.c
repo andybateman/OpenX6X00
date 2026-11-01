@@ -48,6 +48,7 @@ static const struct {
     {"Field Ops", "SOTA, POTA, WWFF...", "field", OPEN_APP, ACTION_APP_FIELD},
     {"Bands", "Band activity", "bands", OPEN_APP, ACTION_APP_BANDS},
     {"Channels", "Memory channels", "channels", OPEN_APP, ACTION_APP_CHANNELS},
+    {"Scan", "Channels or a span, RX", "channels", OPEN_APP, ACTION_APP_SCAN},
     {"SWR Scan", "Sweep, transmits", "swr", OPEN_APP, ACTION_APP_SWRSCAN},
     {"Recorder", "RX audio", "recorder", OPEN_APP, ACTION_APP_RECORDER},
     {"CW Trainer", "Learn CW", "trainer", OPEN_APP, ACTION_APP_CWTRAINER},

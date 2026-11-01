@@ -71,6 +71,7 @@ typedef enum {
     ACTION_APP_JTTY,    /* 123, appended after OLIVIA */
     ACTION_APP_CHANNELS, /* 124: the CHANNELS window, as the hand mic V/M key */
     ACTION_APP_BIRDIE,   /* 125: Birdie Cal */
+    ACTION_APP_SCAN,     /* 126: receive scan */
 } press_action_t;
 
 typedef enum {
